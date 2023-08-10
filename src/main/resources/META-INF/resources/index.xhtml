@@ -70,6 +70,22 @@
                                     value="#{indexController.selectedAccount.name}"
                                     required="true"/>
                    </div>
+                   <div class="field">
+                       <p:outputLabel for="accountType">Account Type</p:outputLabel>
+                       <p:selectOneMenu id="accountType"
+                                      value="#{indexController.selectedAccount.accountType}">
+                           <f:selectItem  itemLabel="Choose" itemValue=""/>
+                           <f:selectItem  itemLabel="Saving" itemValue="Saving"/>
+                           <f:selectItem  itemLabel="Credit" itemValue="Credit"/>
+                           <f:selectItem  itemLabel="Investment" itemValue="Investment"/>
+
+                       </p:selectOneMenu>
+                   </div>
+                       <div class="field">
+                           <p:outputLabel for="balance">Balance</p:outputLabel>
+                           <p:inputNumber id="balance"
+                                          value="#{indexController.selectedAccount}"/>
+                       </div>
                </p:outputPanel>
            </p:dialog>
 
