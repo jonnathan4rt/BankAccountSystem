@@ -58,6 +58,22 @@
                    </h:outputText>
                </p:column>
 
+               <p:column>
+                   <p:commandButton value="Edit" icon="pi pi-pencil"
+                                    update=":shape-modal:account-window"
+                                    oncomplete="PF('windowModalAccount').show()"
+                                    process="@this"
+                                    class="ui-button-primary"
+                                    style="margin-right: .5rem">
+                    <f:setPropertyActionListener
+                        target="#{indexController.selectedAccount}"
+                        value="#{account}"/>
+                       <p:resetInput target=":shape-modal:account-window"/>
+
+                   </p:commandButton>
+
+               </p:column>
+
            </p:dataTable>
        </div>
     </h:form>
