@@ -20,6 +20,7 @@ public class IndexController {
     @Autowired
     AccountService accountService;
     private List<Account>accounts;
+    private Account selectedAccount;
 
     private static final Logger logger =
             LoggerFactory.getLogger(IndexController.class);
@@ -31,5 +32,10 @@ public class IndexController {
     public void loadData(){
         this.accounts = accountService.listAccount();
         accounts.forEach((account)-> logger.info(account.toString()));
+    }
+    public void addAccount(){
+        this.selectedAccount = new Account();
+
+
     }
 }

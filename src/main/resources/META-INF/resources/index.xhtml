@@ -16,10 +16,14 @@
                 <p:menuitem value="Home" icon="pi pi-fw pi-user"
                             update="shape-accounts"
                             actionListener="#{indexController.loadData}"/>
+                <p:menuitem value="New Account" icon="pi pi-fw pi-plus"
+                            actionListener="#{indexController.addAccount}"
+                            update="shape-modal:account-window"
+                            oncomplete="PF('windowModalAccount').show()"/>
             </p:menubar>
 
         </div>
-        <p:growl id="mensajes" showDetail="true"/>
+        <p:growl id="messages" showDetail="true"/>
        <div class="card">
            <p:dataTable value="#{indexController.accounts}" var="account"
                 id="account-table" widgetVar="accountTable">
@@ -55,6 +59,23 @@
            </p:dataTable>
        </div>
     </h:form>
+       <h:form id="shape-modal">
+           <p:dialog header="Details Accounts" showEffect="fade"
+                     modal="true" widgetVar="windowModalAccount"
+                     responsive="true">
+               <p:outputPanel id="account-window" class="ui-fluid">
+                   <div class="field">
+                       <p:outputLabel for="name">Name</p:outputLabel>
+                       <p:inputText id="name"
+                                    value="#{indexController.selectedAccount.name}"
+                                    required="true"/>
+                   </div>
+               </p:outputPanel>
+           </p:dialog>
+
+
+       </h:form>
+
    </div>
 </h:body>
 </h:html>
