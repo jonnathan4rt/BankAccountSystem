@@ -10,10 +10,20 @@
 
 <h:body>
    <div class="card">
+    <h:form id="shape-accounts">
+        <div class="card">
+            <p:menubar>
+                <p:menuitem value="Home" icon="pi pi-fw pi-user"
+                            update="shape-accounts"
+                            actionListener="#{indexController.loadData}"/>
+            </p:menubar>
 
+        </div>
+        <p:growl id="mensajes" showDetail="true"/>
        <div class="card">
-           <p:dataTable value="#{indexController.accounts}" var="account">
-                        <f:facet name="header">
+           <p:dataTable value="#{indexController.accounts}" var="account"
+                id="account-table" widgetVar="accountTable">
+                                       <f:facet name="header">
                             <div class="flex justify-content-center flex-wrap
                             card-container yellow-container">
                                 <div class="flex align-items-center justify-content-center
@@ -44,6 +54,7 @@
 
            </p:dataTable>
        </div>
+    </h:form>
    </div>
 </h:body>
 </h:html>
