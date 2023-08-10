@@ -40,6 +40,7 @@ public class IndexController {
         logger.info("Se crea objeto Cuenta seleccionada para el caso de agregar");
         this.selectedAccount = new Account();
     }
+    // Add Account
     public void saveAccount(){
         logger.info("Account to save: " + this.selectedAccount);
         if (this.selectedAccount.getIdAccount() == null){
@@ -48,9 +49,14 @@ public class IndexController {
             FacesContext.getCurrentInstance().addMessage(null,
                     new FacesMessage("Added Account"));
         }
-        // Ocultamos la ventana
+        else { //Modify Account (Update)
+            this.accountService.saveAccount(this.selectedAccount);
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage("Updated Account"));
+        }
+        // we hide the window
         PrimeFaces.current().executeScript("PF('windowModalAccount').hide()");
-        // Actualizar Tabla
+        // update table
         PrimeFaces.current().ajax().update("shape-accounts:messages",
                 "shape-accounts:account-table");
 
