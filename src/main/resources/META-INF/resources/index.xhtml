@@ -69,7 +69,15 @@
                         target="#{indexController.selectedAccount}"
                         value="#{account}"/>
                        <p:resetInput target=":shape-modal:account-window"/>
+                   </p:commandButton>
 
+                   <p:commandButton value="Delete" class="ui-button-danger"
+                                    icion="pi pi-trash"
+                                    process="@this"
+                                    oncomplete="PF('deleteAccountWindow').show()">
+                       <f:setPropertyActionListener
+                           target="#{indexController.selectedAccount}"
+                           value="#{account}"/>
                    </p:commandButton>
 
                </p:column>
@@ -120,6 +128,19 @@
 
            </p:dialog>
 
+            <p:confirmDialog widgetVar="deleteAccountWindow"
+                             showEffect="fade" width="300"
+                             message="Delete Account?"
+                             header="Confirm" severity="warn">
+                <p:commandButton value="Yes" icon="pi pi-check"
+                                 actionListener="#{indexController.deleteAccount}"
+                                 process="@this"
+                                 oncomplete="PF('deleteAccountWindow').hide()"/>
+                <p:commandButton value="No" type="button"
+                                 styleClass="ui-button-secondary"
+                                 icon="pi pi-times"
+                                 onclick="PF('deleteAccountWindow').hide()"/>
+            </p:confirmDialog>
 
        </h:form>
 

@@ -37,7 +37,7 @@ public class IndexController {
         accounts.forEach((account)-> logger.info(account.toString()));
     }
     public void addAccount(){
-        logger.info("Se crea objeto Cuenta seleccionada para el caso de agregar");
+        logger.info("Selected Account object is created for the case of adding");
         this.selectedAccount = new Account();
     }
     // Add Account
