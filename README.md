@@ -1,8 +1,11 @@
-BankAccountSystem
-Welcome to the BankAccountSystem, a Java Spring project that beautifully simulates a robust banking system. This project utilizes Java, Spring Boot, and PrimeFaces to deliver a seamless and intuitive banking experience.
+# BankAccountSystem
 
-Features
-Sleek Empty State Indicator: The menu elegantly communicates when the list is empty, ensuring a visually pleasing and informative experience. 
+**Welcome to the BankAccountSystem**, a Java Spring project that beautifully simulates a robust banking system. This project utilizes Java, Spring Boot, and PrimeFaces to deliver a seamless and intuitive banking experience.
+
+## Features
+
+- **Sleek Empty State Indicator**: The menu elegantly communicates when the list is empty, ensuring a visually pleasing and informative experience.
+  
 [![01.png](https://i.postimg.cc/Sxx4HQcB/01.png)](https://postimg.cc/xchBz2x5)
 
 se podra editar, agregar y eliminar nuevos elementos
