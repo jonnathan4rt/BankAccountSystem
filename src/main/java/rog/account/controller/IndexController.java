@@ -59,7 +59,22 @@ public class IndexController {
         // update table
         PrimeFaces.current().ajax().update("shape-accounts:messages",
                 "shape-accounts:account-table");
+        // reset
+        this.selectedAccount = null;
 
+    }
+
+    public void deleteAccount(){
+        logger.info("Account to delete: " + this.selectedAccount);
+        this.accountService.deleteAccount(this.selectedAccount);
+        // remove record from account list
+        this.accounts.remove(this.selectedAccount);
+        // reset of the selected object of the table
+        this.selectedAccount = null;
+        FacesContext.getCurrentInstance().addMessage(null,
+                new FacesMessage("Account Deleted"));
+        PrimeFaces.current().ajax().update("shape-accounts:messages",
+                "shape-accounts:account-table");
     }
 
 

@@ -27,7 +27,8 @@
         </div>
         <div class="card">
            <p:dataTable value="#{indexController.accounts}" var="account"
-                id="account-table" widgetVar="accountTable">
+                id="account-table" widgetVar="accountTable"
+                        emptyMessage="No records found.">
 
                                        <f:facet name="header">
                             <div class="flex justify-content-center flex-wrap
