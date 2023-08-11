@@ -24,18 +24,6 @@ Follow these steps to embark on your journey with the BankAccountSystem:
 2. **Configure and Run**: Configure the project according to the provided guidelines and run the application.
 3. **Explore**: Dive into the immersive world of banking functionalities and experience the elegance firsthand.
 
-## Contributions
 
-We welcome contributions to enhance the aesthetics and functionality of the BankAccountSystem. Feel free to submit pull requests and collaborate with us in making this project even more captivating.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE), ensuring the freedom to use, modify, and distribute while attributing credit to the creators.
-
----
-
-*Crafted with ❤️ by the BankAccountSystem Team*
-
-*Your financial journey, reimagined.*
 
 *Note: The images in the documentation are for illustrative purposes and may not represent the final design.*
